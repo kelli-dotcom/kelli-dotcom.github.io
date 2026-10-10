@@ -113,6 +113,11 @@
       color: var(--muted); font-size: clamp(1.1rem, 2.2vw, 1.45rem); line-height: 1.45;
     }
     .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 34px; }
+    .hero figure { margin: 0; }
+    .hero figure img {
+      width: 100%; height: auto; display: block;
+      border-radius: 18px; border: 1px solid var(--line);
+    }
     .button {
       min-height: 52px; display: inline-flex; align-items: center; justify-content: center;
       padding: 13px 19px; border: 1px solid var(--ink); border-radius: 3px;
@@ -359,6 +364,9 @@
           <a class="button secondary" href="https://try.elevenlabs.io/1as5wgqjm2fj" target="_blank" rel="noopener sponsored">Try ElevenLabs free <span class="arrow">&nearr;</span></a>
         </div>
       </div>
+      <figure>
+        <img src="ai-voice-meme.webp" alt="Cartoon of a smiling page turning into sound waves: words to AI voice" width="1024" height="1024" fetchpriority="high">
+      </figure>
     </header>
 
     <div class="page article-grid">
