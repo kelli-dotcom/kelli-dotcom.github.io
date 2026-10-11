@@ -121,6 +121,11 @@
     .listen figure:last-child { margin-bottom: 0; }
     .listen figcaption { font-size: .85rem; color: var(--muted); margin-bottom: 8px; }
     .listen audio { width: 100%; display: block; }
+    .coming-soon {
+      margin: 0 0 34px; padding: 20px 24px;
+      background: var(--card); border: 1px dashed var(--line); border-radius: 14px;
+    }
+    .coming-soon p { margin: 0; }
     .button {
       min-height: 52px; display: inline-flex; align-items: center; justify-content: center;
       padding: 13px 19px; border: 1px solid var(--ink); border-radius: 3px;
@@ -459,6 +464,10 @@
         </section>
 
         <section id="your-turn" class="engagement">
+          <div class="coming-soon">
+            <p><strong>Coming soon.</strong> My cartoon isn't finished yet. When it is, you'll find it linked right here.</p>
+            <!-- LINK SLOT: paste the finished cartoon URL in an <a> tag here on launch -->
+          </div>
           <h2>Got something you have written that deserves to be heard?</h2>
           <p>Pick what I should check next and send it to me in one tap.</p>
           <div class="engagement-options" aria-label="Choose the next guide topic">
