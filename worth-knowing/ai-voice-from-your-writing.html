@@ -113,6 +113,14 @@
       color: var(--muted); font-size: clamp(1.1rem, 2.2vw, 1.45rem); line-height: 1.45;
     }
     .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 34px; }
+    .listen {
+      margin: 26px 0; padding: 22px 24px;
+      background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+    }
+    .listen figure { margin: 0 0 18px; }
+    .listen figure:last-child { margin-bottom: 0; }
+    .listen figcaption { font-size: .85rem; color: var(--muted); margin-bottom: 8px; }
+    .listen audio { width: 100%; display: block; }
     .button {
       min-height: 52px; display: inline-flex; align-items: center; justify-content: center;
       padding: 13px 19px; border: 1px solid var(--ink); border-radius: 3px;
@@ -429,7 +437,18 @@
           <h2>My test</h2>
           <div class="personal-note">
             <p>I ran this draft through Grammarly before it ever touched a voice. It gave me an 86 out of 100 and flagged 13 things, most of them missing commas. I fixed three and left the rest. One suggestion wanted to change how I talk, so no. Two more were locked behind the paid plan, shown as a blurred teaser with a price tag. The free version caught my commas, and honestly that was the part that mattered. Commas are pauses, and pauses are half the voiceover.</p>
-            <p>The script I cleaned is for my cartoon intro, the little commercial introducing the characters and the plot. The audio step is next: that script, a free stock voice, and my own ears checking whether the pauses land where they should. I will put the audio here when it exists. I am not writing about a finished thing. I am writing from the middle of it.</p>
+            <p>The script I cleaned is for my cartoon intro, the little commercial introducing the characters and the plot. Here is the proof, on a sample script. Same AI voice, same words. First as written, then after Grammarly fixed the punctuation. Listen to where the pauses land.</p>
+            <div class="listen">
+              <figure>
+                <figcaption>Before — no punctuation, one long run-on</figcaption>
+                <audio controls preload="none" src="script-before.mp3"></audio>
+              </figure>
+              <figure>
+                <figcaption>After — Grammarly cleaned it up</figcaption>
+                <audio controls preload="none" src="script-after.mp3"></audio>
+              </figure>
+            </div>
+            <p>That is the whole trick. Nobody changed the words. The commas did it. I am not writing about a finished thing. I am writing from the middle of it.</p>
           </div>
         </section>
 
