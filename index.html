@@ -280,6 +280,10 @@
     .project p { color: var(--muted); margin-bottom: 14px; }
     .tags { display: flex; flex-wrap: wrap; gap: 8px; }
     .tag { background: var(--mint); color: var(--forest); padding: 5px 10px; border-radius: 6px; font-size: .82rem; font-weight: 700; }
+    .project-progress { margin-top: 16px; }
+    .progress-meta { display: flex; justify-content: space-between; align-items: center; font-size: .82rem; font-weight: 700; color: var(--forest-2); margin-bottom: 6px; }
+    .progress-track { height: 8px; width: 100%; border-radius: 999px; background: var(--mint); overflow: hidden; }
+    .progress-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--forest), var(--forest-2)); }
 
     .credentials { background: var(--credentials-bg); color: var(--credentials-ink); }
     .credentials .eyebrow { color: var(--credentials-accent); }
@@ -464,6 +468,12 @@
           <div class="project-detail">
             <p>An AI agent-powered operating system designed around the flow of a real school-kitchen day — food-safety logging, temperature tracking, inspection readiness, credentials, and proof that the work was done.</p>
             <div class="tags"><span class="tag">Food safety</span><span class="tag">School operations</span><span class="tag">AI workflows</span></div>
+            <div class="project-progress">
+              <div class="progress-meta"><span>Build progress — In development</span><span>70%</span></div>
+              <div class="progress-track" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="School Kitchen OS progress 70%">
+                <div class="progress-fill" style="width: 70%;"></div>
+              </div>
+            </div>
           </div>
         </article>
 
@@ -476,6 +486,12 @@
           <div class="project-detail">
             <p>A school IT asset-management system for NFC-tagged devices, chargers, and loaners. It is being designed for adult-supervised school workflows, clear accountability, and privacy-minded records.</p>
             <div class="tags"><span class="tag">School IT</span><span class="tag">NFC</span><span class="tag">Asset management</span></div>
+            <div class="project-progress">
+              <div class="progress-meta"><span>Build progress — In development</span><span>50%</span></div>
+              <div class="progress-track" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" aria-label="CRTA Asset Tracker progress 50%">
+                <div class="progress-fill" style="width: 50%;"></div>
+              </div>
+            </div>
           </div>
         </article>
 
@@ -488,6 +504,30 @@
           <div class="project-detail">
             <p>A coloring-book and curriculum world that introduces Pre-K through second-grade learners to technology through story, creativity, and age-appropriate adventure.</p>
             <div class="tags"><span class="tag">Early learning</span><span class="tag">Technology education</span><span class="tag">Creative learning</span></div>
+            <div class="project-progress">
+              <div class="progress-meta"><span>Build progress — Active publishing</span><span>85%</span></div>
+              <div class="progress-track" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="The Great Tech Adventure progress 85%">
+                <div class="progress-fill" style="width: 85%;"></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-num">04</div>
+          <div>
+            <h3>GetCrowd</h3>
+            <div class="project-role">CRTA Tech Solutions</div>
+          </div>
+          <div class="project-detail">
+            <p>A food-truck operator intelligence and compliance headquarters — 1,322+ verified spots, real city permits, Mobile Food Plan Review roadmap, Parks &amp; Recreation and zoning rules, shift profit tracking, and weekly route planning.</p>
+            <div class="tags"><span class="tag">Food trucks</span><span class="tag">Compliance</span><span class="tag">Operator OS</span></div>
+            <div class="project-progress">
+              <div class="progress-meta"><span>Build progress — Active QA &amp; fact-checking</span><span>80%</span></div>
+              <div class="progress-track" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="GetCrowd progress 80%">
+                <div class="progress-fill" style="width: 80%;"></div>
+              </div>
+            </div>
           </div>
         </article>
       </div>
