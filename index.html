@@ -383,6 +383,135 @@
       html { scroll-behavior: auto; }
       *, *::before, *::after { transition-duration: .01ms !important; }
     }
+  
+    /* Feather Themes: Photobiology States */
+    [data-theme="calm-forest"] {
+      --bg: #f4f7f5;
+      --paper: #ffffff;
+      --ink: #172521;
+      --muted: #52625d;
+      --line: #d7dfdb;
+      --forest: #173f35;
+      --forest-2: #245848;
+      --rust: #c65d3a;
+      --rust-soft: #f5ddd5;
+      --mint: #dcebe3;
+      --gold: #e5b95e;
+      --credentials-bg: #173f35;
+      --credentials-ink: #f5fbf8;
+      --credentials-sub: #e2ece8;
+      --credentials-accent: #f2b69f;
+      --credentials-card: rgba(255,255,255,.09);
+      --credentials-border: rgba(255,255,255,.16);
+      --shadow: 0 18px 60px rgba(20, 48, 40, .12);
+    }
+
+    [data-theme="day-crisp"] {
+      --bg: #f8fafc;
+      --paper: #ffffff;
+      --ink: #0f172a;
+      --muted: #475569;
+      --line: #cbd5e1;
+      --forest: #0284c7;
+      --forest-2: #0369a1;
+      --rust: #2563eb;
+      --rust-soft: #dbeafe;
+      --mint: #e0f2fe;
+      --gold: #f59e0b;
+      --credentials-bg: #0f172a;
+      --credentials-ink: #f8fafc;
+      --credentials-sub: #cbd5e1;
+      --credentials-accent: #38bdf8;
+      --credentials-card: rgba(255,255,255,.09);
+      --credentials-border: rgba(255,255,255,.16);
+      --shadow: 0 18px 60px rgba(15, 23, 42, .08);
+    }
+
+    [data-theme="amber-glow"] {
+      --bg: #18120e;
+      --paper: #241a14;
+      --ink: #fcefe6;
+      --muted: #c9ad9a;
+      --line: #423228;
+      --forest: #f59e0b;
+      --forest-2: #d97706;
+      --rust: #ea580c;
+      --rust-soft: #452414;
+      --mint: #382417;
+      --gold: #fbbf24;
+      --credentials-bg: #241a14;
+      --credentials-ink: #fcefe6;
+      --credentials-sub: #c9ad9a;
+      --credentials-accent: #f97316;
+      --credentials-card: rgba(255,255,255,.07);
+      --credentials-border: rgba(255,255,255,.14);
+      --shadow: 0 18px 60px rgba(0, 0, 0, .4);
+    }
+
+    [data-theme="obsidian-dark"] {
+      --bg: #090d0b;
+      --paper: #121915;
+      --ink: #f2f7f4;
+      --muted: #94a89e;
+      --line: #223029;
+      --forest: #34d399;
+      --forest-2: #10b981;
+      --rust: #f43f5e;
+      --rust-soft: #381a22;
+      --mint: #162e24;
+      --gold: #fbbf24;
+      --credentials-bg: #121915;
+      --credentials-ink: #f2f7f4;
+      --credentials-sub: #94a89e;
+      --credentials-accent: #34d399;
+      --credentials-card: rgba(255,255,255,.06);
+      --credentials-border: rgba(255,255,255,.12);
+      --shadow: 0 18px 60px rgba(0, 0, 0, .5);
+    }
+
+    .theme-toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--paper);
+      color: var(--ink);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-size: .84rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all .15s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,.04);
+    }
+    .theme-toggle-btn:hover {
+      border-color: var(--rust);
+      transform: translateY(-1px);
+    }
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 12px;
+      font-size: .92rem;
+      font-weight: 700;
+      color: var(--forest);
+      text-decoration: none;
+      transition: color .15s ease;
+    }
+    .project-link:hover {
+      color: var(--rust);
+      text-decoration: underline;
+    }
+    .social-line a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .social-line a:hover {
+      color: var(--rust);
+    }
+
   </style>
 </head>
 <body>
@@ -393,6 +522,10 @@
     <a href="#work">What I’m building</a>
     <a href="#credentials">Credentials</a>
     <a href="#contact">Contact</a>
+    <button class="theme-toggle-btn" id="theme-toggle" type="button" aria-label="Switch Feather Theme">
+      <span class="theme-icon">🪶</span>
+      <span class="theme-label" id="theme-name">Calm Forest</span>
+    </button>
   </nav>
 
   <main id="main">
@@ -400,7 +533,7 @@
       <div class="hero-copy">
         <p class="place">Philadelphia, Pennsylvania</p>
         <h1 id="hero-title">Kelli<br />Reeves-<span>Jennings</span></h1>
-        <p class="intro">Founder, builder, and school-operations problem solver. I turn firsthand experience into practical technology for the people doing the work.</p>
+        <p class="intro">Founder, builder, and school-operations problem solver. Through CRTA Tech Solutions &amp; CRTA kidz, I build zero-dependency AI agent systems, lightweight developer tools, and practical software for real-world operations.</p>
         <div class="hero-actions">
           <a class="btn" href="#work">
             See what I’m building
@@ -455,23 +588,27 @@
           <p class="eyebrow">What I’m building</p>
           <h2>Practical ideas with a real reason behind them.</h2>
         </div>
-        <p>I’m focused on places where better systems can make daily work safer, simpler, and easier to prove.</p>
+        <p>From open-source AI agent tooling and zero-dependency accessibility kits to school food-safety and mobile compliance systems.</p>
       </div>
 
-      <div class="project-list">
+            <div class="project-list">
         <article class="project">
           <div class="project-num">01</div>
           <div>
-            <h3>School Kitchen OS</h3>
-            <div class="project-role">CRTA Tech Solutions</div>
+            <h3>Openflex</h3>
+            <div class="project-role">CRTA Tech Solutions · Open Source (MIT)</div>
           </div>
           <div class="project-detail">
-            <p>An AI agent-powered operating system designed around the flow of a real school-kitchen day — food-safety logging, temperature tracking, inspection readiness, credentials, and proof that the work was done.</p>
-            <div class="tags"><span class="tag">Food safety</span><span class="tag">School operations</span><span class="tag">AI workflows</span></div>
+            <p>The open-source, scam-free remote job engine. Ingests directly from 60+ verified public ATS JSON APIs (Greenhouse, Lever, Ashby) with live Ghost-Job risk scoring, semantic vector search (pgvector), and 12 photobiology themes. $0 paywalls for job seekers.</p>
+            <div class="tags"><span class="tag">Remote Truth</span><span class="tag">ATS Ingestion</span><span class="tag">AI Ghost Detection</span><span class="tag">Next.js 15</span></div>
+            <a class="project-link" href="https://github.com/kelli-dotcom/openflex" target="_blank" rel="noopener">
+              View on GitHub
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
             <div class="project-progress">
-              <div class="progress-meta"><span>Build progress — In development</span><span>70%</span></div>
-              <div class="progress-track" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="School Kitchen OS progress 70%">
-                <div class="progress-fill" style="width: 70%;"></div>
+              <div class="progress-meta"><span>Build progress — Production architecture</span><span>95%</span></div>
+              <div class="progress-track" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="Openflex progress 95%">
+                <div class="progress-fill" style="width: 95%;"></div>
               </div>
             </div>
           </div>
@@ -480,16 +617,20 @@
         <article class="project">
           <div class="project-num">02</div>
           <div>
-            <h3>CRTA Asset Tracker</h3>
-            <div class="project-role">CRTA Tech Solutions</div>
+            <h3>CRTA Pro Vault</h3>
+            <div class="project-role">CRTA Tech Solutions · Commercial Self-Serve</div>
           </div>
           <div class="project-detail">
-            <p>A school IT asset-management system for NFC-tagged devices, chargers, and loaners. It is being designed for adult-supervised school workflows, clear accountability, and privacy-minded records.</p>
-            <div class="tags"><span class="tag">School IT</span><span class="tag">NFC</span><span class="tag">Asset management</span></div>
+            <p>Production AI agent guardrails, strict JSON handoff contracts (handoff.schema.json), Rule-of-2 loop caps, and filled Master Context blueprints. Engineered for Mac, iPhone, and 8GB Chromebook workflows — delivered as a private GitHub repo + 1-tap mobile ZIP.</p>
+            <div class="tags"><span class="tag">AI Agents</span><span class="tag">Multi-Agent Protocol</span><span class="tag">Rule of 2</span><span class="tag">Zero-Contact</span></div>
+            <a class="project-link" href="https://github.com/kelli-dotcom/crta-pro-vault" target="_blank" rel="noopener">
+              View Repository Details
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
             <div class="project-progress">
-              <div class="progress-meta"><span>Build progress — In development</span><span>50%</span></div>
-              <div class="progress-track" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" aria-label="CRTA Asset Tracker progress 50%">
-                <div class="progress-fill" style="width: 50%;"></div>
+              <div class="progress-meta"><span>Build progress — v1.0.0 Live &amp; Shipped</span><span>100%</span></div>
+              <div class="progress-track" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="CRTA Pro Vault progress 100%">
+                <div class="progress-fill" style="width: 100%;"></div>
               </div>
             </div>
           </div>
@@ -498,16 +639,20 @@
         <article class="project">
           <div class="project-num">03</div>
           <div>
-            <h3>The Great Tech Adventure</h3>
-            <div class="project-role">CRTA kidz</div>
+            <h3>Feather Themes</h3>
+            <div class="project-role">CRTA Tech Solutions · Open Source (MIT)</div>
           </div>
           <div class="project-detail">
-            <p>A coloring-book and curriculum world that introduces Pre-K through second-grade learners to technology through story, creativity, and age-appropriate adventure.</p>
-            <div class="tags"><span class="tag">Early learning</span><span class="tag">Technology education</span><span class="tag">Creative learning</span></div>
+            <p>1,092 scientifically calibrated, WCAG 2.1 AA/AAA verified themes across 10 human photobiology states — in under 6 KB with zero dependencies. Runs smoothly on 2–4 GB school Chromebooks, older smartphones, and slow connections.</p>
+            <div class="tags"><span class="tag">Photobiology</span><span class="tag">Zero Dependencies</span><span class="tag">Low-RAM UI</span><span class="tag">WCAG AAA</span></div>
+            <a class="project-link" href="https://github.com/kelli-dotcom/feather-themes" target="_blank" rel="noopener">
+              View on GitHub
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
             <div class="project-progress">
-              <div class="progress-meta"><span>Build progress — Active publishing</span><span>85%</span></div>
-              <div class="progress-track" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="The Great Tech Adventure progress 85%">
-                <div class="progress-fill" style="width: 85%;"></div>
+              <div class="progress-meta"><span>Build progress — 1,092 Themes Calibrated</span><span>100%</span></div>
+              <div class="progress-track" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="Feather Themes progress 100%">
+                <div class="progress-fill" style="width: 100%;"></div>
               </div>
             </div>
           </div>
@@ -515,6 +660,46 @@
 
         <article class="project">
           <div class="project-num">04</div>
+          <div>
+            <h3>Agent Etiquette &amp; Universal Master Context</h3>
+            <div class="project-role">CRTA Tech Solutions · Open Source (MIT)</div>
+          </div>
+          <div class="project-detail">
+            <p>The standard open-source toolkit for reliable AI coding agents: deterministic machine-verifiable JSON handoff contracts (handoff.schema.json), 3-agent concurrency limits, and adaptive project context engineering templates.</p>
+            <div class="tags"><span class="tag">Multi-Agent Protocol</span><span class="tag">JSON Contract</span><span class="tag">Context Engineering</span></div>
+            <a class="project-link" href="https://github.com/kelli-dotcom/agent-etiquette" target="_blank" rel="noopener">
+              View on GitHub
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <div class="project-progress">
+              <div class="progress-meta"><span>Build progress — v1.1.0 Specification</span><span>100%</span></div>
+              <div class="progress-track" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="Agent Etiquette progress 100%">
+                <div class="progress-fill" style="width: 100%;"></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-num">05</div>
+          <div>
+            <h3>School Kitchen OS</h3>
+            <div class="project-role">CRTA Tech Solutions</div>
+          </div>
+          <div class="project-detail">
+            <p>An AI agent-powered operating system designed around the flow of a real school-kitchen day — food-safety logging, temperature tracking, inspection readiness, credentials, and proof that the work was done.</p>
+            <div class="tags"><span class="tag">Food safety</span><span class="tag">School operations</span><span class="tag">AI workflows</span></div>
+            <div class="project-progress">
+              <div class="progress-meta"><span>Build progress — In development</span><span>75%</span></div>
+              <div class="progress-track" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="School Kitchen OS progress 75%">
+                <div class="progress-fill" style="width: 75%;"></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-num">06</div>
           <div>
             <h3>GetCrowd</h3>
             <div class="project-role">CRTA Tech Solutions</div>
@@ -526,6 +711,42 @@
               <div class="progress-meta"><span>Build progress — Operator UX, evidence audit &amp; Crowd Compass rebuild</span><span>90%</span></div>
               <div class="progress-track" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="GetCrowd progress 90%">
                 <div class="progress-fill" style="width: 90%;"></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-num">07</div>
+          <div>
+            <h3>CRTA Asset Tracker</h3>
+            <div class="project-role">CRTA Tech Solutions</div>
+          </div>
+          <div class="project-detail">
+            <p>A school IT asset-management system for NFC-tagged devices, chargers, and loaners. It is being designed for adult-supervised school workflows, clear accountability, and privacy-minded records.</p>
+            <div class="tags"><span class="tag">School IT</span><span class="tag">NFC</span><span class="tag">Asset management</span></div>
+            <div class="project-progress">
+              <div class="progress-meta"><span>Build progress — In development</span><span>60%</span></div>
+              <div class="progress-track" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" aria-label="CRTA Asset Tracker progress 60%">
+                <div class="progress-fill" style="width: 60%;"></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-num">08</div>
+          <div>
+            <h3>The Great Tech Adventure</h3>
+            <div class="project-role">CRTA kidz</div>
+          </div>
+          <div class="project-detail">
+            <p>A coloring-book and curriculum world that introduces Pre-K through second-grade learners to technology through story, creativity, and age-appropriate adventure.</p>
+            <div class="tags"><span class="tag">Early learning</span><span class="tag">Technology education</span><span class="tag">Creative learning</span></div>
+            <div class="project-progress">
+              <div class="progress-meta"><span>Build progress — Active publishing</span><span>85%</span></div>
+              <div class="progress-track" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="The Great Tech Adventure progress 85%">
+                <div class="progress-fill" style="width: 85%;"></div>
               </div>
             </div>
           </div>
@@ -570,8 +791,8 @@
           </button>
           <div class="email-text">crtatechsolutions@gmail.com</div>
           <div class="social-line" aria-label="Social profiles">
-            <span>GitHub · @kelli-dotcom</span>
-            <span>LinkedIn · Kelli Reeves-Jennings</span>
+            <span><a href="https://github.com/kelli-dotcom" target="_blank" rel="noopener">GitHub · @kelli-dotcom</a></span>
+            <span><a href="https://www.linkedin.com/in/kelli-reeves-jennings" target="_blank" rel="noopener">LinkedIn · Kelli Reeves-Jennings</a></span>
           </div>
         </div>
       </div>
@@ -625,6 +846,40 @@
         });
       });
     }());
+
+    // Feather Themes Photobiology Switcher
+    (function () {
+      var themes = [
+        { id: 'calm-forest', name: 'Calm Forest', icon: '🌲' },
+        { id: 'day-crisp', name: 'Day Crisp', icon: '☀️' },
+        { id: 'amber-glow', name: 'Amber Glow', icon: '🌅' },
+        { id: 'obsidian-dark', name: 'Obsidian Dark', icon: '🌙' }
+      ];
+      var currentIdx = 0;
+      var saved = localStorage.getItem('crta-feather-theme');
+      if (saved) {
+        var found = themes.findIndex(function(t) { return t.id === saved; });
+        if (found >= 0) currentIdx = found;
+      }
+      function apply(idx) {
+        var t = themes[idx];
+        document.documentElement.setAttribute('data-theme', t.id);
+        var label = document.getElementById('theme-name');
+        if (label) label.textContent = t.name;
+        var icon = document.querySelector('.theme-icon');
+        if (icon) icon.textContent = t.icon;
+        localStorage.setItem('crta-feather-theme', t.id);
+      }
+      apply(currentIdx);
+      var btn = document.getElementById('theme-toggle');
+      if (btn) {
+        btn.addEventListener('click', function() {
+          currentIdx = (currentIdx + 1) % themes.length;
+          apply(currentIdx);
+        });
+      }
+    })();
+
   </script>
 </body>
 </html>
