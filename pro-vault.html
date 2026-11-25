@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="en" data-theme="sandstone">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6VZJ65RFJ7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6VZJ65RFJ7');
+</script>
+
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="description" content="Kelli Reeves-Jennings runs CRTA Tech Solutions and CRTA kidz. She builds simple, low-cost tools for school kitchens, school IT, food trucks, and kids starting out in tech." />
+  <link rel="icon" href="data:," />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <title>CRTA Pro Vault — CRTA Tech Solutions</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f4f7f5;
+      --paper: #ffffff;
+      --ink: #172521;
+      --muted: #52625d;
+      --line: #d7dfdb;
+      --forest: #173f35;
+      --forest-2: #245848;
+      --rust: #c65d3a;
+      --rust-soft: #f5ddd5;
+      --mint: #dcebe3;
+      --gold: #e5b95e;
+      --credentials-bg: #173f35;
+      --credentials-ink: #f5fbf8;
+      --credentials-sub: #e2ece8;
+      --credentials-accent: #f2b69f;
+      --credentials-card: rgba(255,255,255,.09);
+      --credentials-border: rgba(255,255,255,.16);
+      --shadow: 0 18px 60px rgba(20, 48, 40, .12);
+      --radius-lg: 30px;
+      --radius-md: 18px;
+    }
+
+    
+    * { box-sizing: border-box; }
+    html { scroll-behavior: auto; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Source Sans 3", sans-serif;
+      font-size: 18px;
+      line-height: 1.55;
+      text-rendering: optimizeLegibility;
+    }
+    a { color: inherit; }
+    button { font: inherit; }
+    img { max-width: 100%; display: block; }
+
+    .skip-link {
+      position: fixed;
+      left: 16px;
+      top: -80px;
+      z-index: 20;
+      background: var(--paper);
+      color: var(--ink);
+      padding: 10px 14px;
+      border-radius: 8px;
+    }
+    .skip-link:focus { top: 16px; }
+
+    .wrap { width: min(1160px, calc(100% - 40px)); margin: 0 auto; }
+
+    .jump-nav {
+      display: flex;
+      justify-content: flex-end;
+      gap: 28px;
+      padding: 26px 0 10px;
+      font-size: .88rem;
+      font-weight: 700;
+    }
+    .jump-nav a {
+      text-decoration: none;
+      padding: 8px 0;
+      border-bottom: 2px solid transparent;
+    }
+    .jump-nav a:hover, .jump-nav a:focus-visible { border-color: var(--rust); outline: none; }
+
+    .hero {
+      min-height: 680px;
+      display: grid;
+      grid-template-columns: 1.13fr .87fr;
+      align-items: center;
+      gap: clamp(40px, 7vw, 92px);
+      padding: 54px 0 92px;
+    }
+    .hero-copy { position: relative; z-index: 1; }
+    .place {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 26px;
+      color: var(--forest-2);
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .place::before { content: ""; width: 30px; height: 2px; background: var(--rust); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      font-family: "Lora", serif;
+      font-size: clamp(3.15rem, 6.2vw, 5.7rem);
+      line-height: .98;
+      letter-spacing: -.055em;
+      margin-bottom: 26px;
+      max-width: 720px;
+    }
+    h1 span { color: var(--rust); }
+    .intro {
+      max-width: 680px;
+      color: var(--muted);
+      font-size: clamp(1.22rem, 2vw, 1.55rem);
+      line-height: 1.42;
+      margin-bottom: 34px;
+    }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex;
+      min-height: 52px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 20px;
+      border: 1px solid var(--forest);
+      border-radius: 12px;
+      background: var(--forest);
+      color: var(--paper);
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .btn:hover, .btn:focus-visible { background: var(--forest-2); border-color: var(--forest-2); outline: 3px solid color-mix(in srgb, var(--forest) 26%, transparent); }
+    .btn.secondary { background: transparent; color: var(--forest); }
+    .btn.secondary:hover, .btn.secondary:focus-visible { background: var(--mint); }
+    .btn svg { width: 19px; height: 19px; }
+
+    .portrait-wrap { position: relative; padding: 30px 0 0 30px; }
+    .portrait-wrap::before {
+      content: "";
+      position: absolute;
+      inset: 0 34px 44px 0;
+      background: var(--rust-soft);
+      border-radius: 120px 24px 24px 24px;
+    }
+    .portrait-wrap::after {
+      content: "";
+      position: absolute;
+      width: 84px;
+      height: 84px;
+      right: -15px;
+      bottom: 20px;
+      border: 14px solid var(--gold);
+      border-radius: 50%;
+      z-index: 2;
+    }
+    .portrait {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: min(640px, 52vw);
+      object-fit: cover;
+      object-position: 50% 42%;
+      border-radius: 22px 90px 22px 22px;
+      box-shadow: var(--shadow);
+    }
+
+    section { scroll-margin-top: 24px; }
+    .section { padding: 104px 0; }
+    .eyebrow {
+      margin: 0 0 16px;
+      color: var(--rust);
+      font-size: .82rem;
+      line-height: 1;
+      font-weight: 800;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+    }
+    h2 {
+      font-family: "Lora", serif;
+      font-size: clamp(2.25rem, 4vw, 3.7rem);
+      line-height: 1.08;
+      letter-spacing: -.035em;
+      margin-bottom: 28px;
+    }
+    .section-lead { max-width: 720px; color: var(--muted); font-size: 1.15rem; }
+
+    .story-band { background: var(--paper); border-block: 1px solid var(--line); }
+    .story-grid { display: grid; grid-template-columns: .78fr 1.22fr; gap: clamp(46px, 8vw, 110px); align-items: start; }
+    .pullquote {
+      font-family: "Lora", serif;
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      line-height: 1.28;
+      color: var(--forest);
+      border-top: 5px solid var(--rust);
+      padding-top: 24px;
+      margin: 8px 0 0;
+    }
+    .story-copy p { color: var(--muted); font-size: 1.12rem; }
+    .story-copy p:first-child { color: var(--ink); font-size: 1.28rem; }
+    .story-copy strong { color: var(--ink); }
+
+    .path {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      margin-top: 62px;
+      border-top: 1px solid var(--line);
+    }
+    .path-item { position: relative; padding: 30px 34px 0 0; }
+    .path-item:not(:last-child) { border-right: 1px solid var(--line); margin-right: 34px; }
+    .path-item::before {
+      content: "";
+      position: absolute;
+      width: 11px;
+      height: 11px;
+      top: -6px;
+      left: 0;
+      background: var(--rust);
+      border-radius: 50%;
+      box-shadow: 0 0 0 5px var(--bg);
+    }
+    .path-year { color: var(--rust); font-weight: 800; font-size: .84rem; letter-spacing: .08em; }
+    .path-item h3 { font-size: 1.15rem; margin: 8px 0 6px; }
+    .path-item p { color: var(--muted); font-size: .98rem; }
+
+    .projects-header { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: end; margin-bottom: 36px; }
+    .projects-header h2 { margin-bottom: 0; }
+    .projects-header p { color: var(--muted); margin-bottom: 7px; }
+    .project-list { border-top: 1px solid var(--line); }
+    .project {
+      display: grid;
+      grid-template-columns: 82px 1fr 1.15fr;
+      gap: 34px;
+      align-items: start;
+      padding: 42px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .project-num {
+      font-family: "Lora", serif;
+      color: var(--rust);
+      font-size: 1.15rem;
+    }
+    .project h3 { font-family: "Lora", serif; font-size: 1.65rem; line-height: 1.15; margin-bottom: 9px; }
+    .project-role { color: var(--forest-2); font-size: .9rem; font-weight: 700; }
+    .project p { color: var(--muted); margin-bottom: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { background: var(--mint); color: var(--forest); padding: 5px 10px; border-radius: 6px; font-size: .82rem; font-weight: 700; }
+    .project-progress { margin-top: 16px; }
+    .progress-meta { display: flex; justify-content: space-between; align-items: center; font-size: .82rem; font-weight: 700; color: var(--forest-2); margin-bottom: 6px; }
+    .progress-track { height: 8px; width: 100%; border-radius: 999px; background: var(--mint); overflow: hidden; }
+    .progress-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--forest), var(--forest-2)); }
+
+    .credentials { background: var(--credentials-bg); color: var(--credentials-ink); }
+    .credentials .eyebrow { color: var(--credentials-accent); }
+    .credentials h2 { max-width: 700px; }
+    .credential-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 44px; }
+    .credential {
+      display: grid;
+      grid-template-columns: 54px 1fr;
+      gap: 20px;
+      padding: 28px;
+      background: var(--credentials-card);
+      border: 1px solid var(--credentials-border);
+      border-radius: var(--radius-md);
+    }
+    .credential svg { width: 48px; height: 48px; color: var(--credentials-accent); }
+    .credential h3 { margin-bottom: 5px; font-size: 1.15rem; }
+    .credential p { margin-bottom: 0; color: var(--credentials-sub); font-size: .95rem; font-weight: 600; }
+
+    .contact-section { padding-bottom: 52px; }
+    .contact-panel {
+      display: grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap: 48px;
+      align-items: center;
+      padding: clamp(32px, 7vw, 76px);
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+    }
+    .contact-panel h2 { margin-bottom: 18px; }
+    .contact-panel p { color: var(--muted); margin-bottom: 0; max-width: 640px; }
+    .contact-actions { display: grid; gap: 12px; }
+    .email-text { overflow-wrap: anywhere; font-size: .88rem; color: var(--muted); text-align: center; }
+    .social-line { display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; font-size: .9rem; font-weight: 700; }
+    .social-line span { display: inline-flex; align-items: center; gap: 7px; }
+
+    footer { width: min(1160px, calc(100% - 40px)); margin: 0 auto; padding: 20px 0 36px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 20px; color: var(--muted); font-size: .86rem; }
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: max(22px, env(safe-area-inset-bottom));
+      z-index: 30;
+      transform: translate(-50%, 20px);
+      padding: 11px 16px;
+      border-radius: 9px;
+      background: var(--ink);
+      color: var(--paper);
+      font-size: .9rem;
+      font-weight: 700;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .2s ease, transform .2s ease;
+    }
+    .toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+    @media (max-width: 850px) {
+      .jump-nav { justify-content: center; }
+      .hero { grid-template-columns: 1fr; min-height: unset; padding-top: 42px; }
+      .hero-copy { order: 0; }
+      .portrait-wrap { order: 1; width: min(440px, 88%); margin: 0 auto; }
+      .portrait { height: min(520px, 112vw); }
+      .story-grid, .projects-header, .contact-panel { grid-template-columns: 1fr; }
+      .project { grid-template-columns: 52px 1fr; }
+      .project-detail { grid-column: 2; }
+      .path { grid-template-columns: 1fr; border-top: 0; }
+      .path-item { padding: 0 0 28px 28px; border-left: 1px solid var(--line); }
+      .path-item:not(:last-child) { border-right: 0; margin-right: 0; }
+      .path-item::before { top: 7px; left: -6px; box-shadow: 0 0 0 5px var(--bg); }
+      .credential-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 540px) {
+      body { font-size: 17px; }
+      .wrap { width: min(100% - 28px, 1160px); }
+      .jump-nav { gap: 18px; padding-top: 14px; font-size: .82rem; }
+      .jump-nav a:first-child { display: none; }
+      .hero { padding: 28px 0 70px; gap: 44px; }
+      .portrait-wrap { width: 92%; padding: 18px 0 0 18px; }
+      .portrait-wrap::before { inset: 0 22px 30px 0; border-radius: 90px 18px 18px 18px; }
+      .portrait-wrap::after { width: 56px; height: 56px; border-width: 9px; right: -7px; bottom: 10px; }
+      .portrait { height: 420px; border-radius: 16px 66px 16px 16px; object-position: 50% 38%; }
+      h1 { font-size: clamp(2.8rem, 14vw, 4.1rem); }
+      .intro { font-size: 1.15rem; }
+      .hero-actions { display: grid; }
+      .btn { width: 100%; }
+      .section { padding: 74px 0; }
+      .project { grid-template-columns: 38px 1fr; gap: 16px; padding: 34px 0; }
+      .credential { grid-template-columns: 42px 1fr; padding: 22px; }
+      .credential svg { width: 38px; height: 38px; }
+      .contact-panel { border-radius: 20px; padding: 32px 22px; }
+      footer { width: min(100% - 28px, 1160px); flex-direction: column; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  
+    /* Feather Themes — 12 flagships from feather-themes, mapped onto this
+       site's original Calm Forest variables so the whole original design
+       (layout, buttons, sections) recolours. Sandstone is the default. */
+    [data-theme="sandstone"]{ --bg:#f5f2eb; --paper:#fffdf9; --ink:#1c1917; --muted:#57534e; --line:#d6cfc2; --forest:#1c1917; --forest-2:#047857; --rust:#047857; --rust-soft:#ece3d3; --mint:#e9e1cf; --gold:#e5b95e; --credentials-bg:#173f35; --credentials-ink:#f5fbf8; --credentials-sub:#e2ece8; --credentials-accent:#f2b69f; --credentials-card:rgba(255,255,255,.09); --credentials-border:rgba(255,255,255,.16); --shadow:0 18px 60px rgba(20,48,40,.12); }
+    [data-theme="paper-light"]{ --bg:#f8fafc; --paper:#ffffff; --ink:#0f172a; --muted:#475569; --line:#cbd5e1; --forest:#0f172a; --forest-2:#059669; --rust:#059669; --rust-soft:#d9f2e7; --mint:#e2e8f0; --gold:#e5b95e; --credentials-bg:#0f172a; --credentials-ink:#f8fafc; --credentials-sub:#cbd5e1; --credentials-accent:#6ee7b7; --credentials-card:rgba(255,255,255,.09); --credentials-border:rgba(255,255,255,.16); --shadow:0 18px 60px rgba(15,23,42,.10); }
+    [data-theme="midday-sunlit"]{ --bg:#fcfaf2; --paper:#ffffff; --ink:#1c1917; --muted:#57534e; --line:#e5dec9; --forest:#1c1917; --forest-2:#0f766e; --rust:#0f766e; --rust-soft:#d7efec; --mint:#eee8d2; --gold:#e5b95e; --credentials-bg:#134e4a; --credentials-ink:#f0fdfa; --credentials-sub:#ccfbf1; --credentials-accent:#5eead4; --credentials-card:rgba(255,255,255,.09); --credentials-border:rgba(255,255,255,.16); --shadow:0 18px 60px rgba(20,48,40,.10); }
+    [data-theme="morning-rose"]{ --bg:#fdf6f4; --paper:#fffbfa; --ink:#271b1d; --muted:#6e565b; --line:#e7d4cf; --forest:#271b1d; --forest-2:#9d435f; --rust:#a84863; --rust-soft:#f7e3e0; --mint:#f3e2de; --gold:#e5b95e; --credentials-bg:#3d2229; --credentials-ink:#fff5f2; --credentials-sub:#f3d9d3; --credentials-accent:#f2a9bb; --credentials-card:rgba(255,255,255,.09); --credentials-border:rgba(255,255,255,.16); --shadow:0 18px 60px rgba(61,34,41,.12); }
+    [data-theme="forest"]{ --bg:#08120e; --paper:#0f1f18; --ink:#e6f4ee; --muted:#86b3a0; --line:#1e3a2f; --forest:#e6f4ee; --forest-2:#34d399; --rust:#34d399; --rust-soft:#143327; --mint:#1e3a2f; --gold:#e5b95e; --credentials-bg:#e6f4ee; --credentials-ink:#08120e; --credentials-sub:#245848; --credentials-accent:#9a3b26; --credentials-card:rgba(8,18,14,.07); --credentials-border:rgba(8,18,14,.16); --shadow:0 18px 60px rgba(0,0,0,.4); }
+    [data-theme="obsidian"]{ --bg:#09090b; --paper:#18181b; --ink:#f4f4f5; --muted:#a1a1aa; --line:#27272a; --forest:#f4f4f5; --forest-2:#10b981; --rust:#10b981; --rust-soft:#12362a; --mint:#27272a; --gold:#e5b95e; --credentials-bg:#f4f4f5; --credentials-ink:#09090b; --credentials-sub:#3f3f46; --credentials-accent:#065f46; --credentials-card:rgba(9,9,11,.07); --credentials-border:rgba(9,9,11,.16); --shadow:0 18px 60px rgba(0,0,0,.5); }
+    [data-theme="golden-hour"]{ --bg:#1c1317; --paper:#291c22; --ink:#f7ebe8; --muted:#d6b2ba; --line:#4a333d; --forest:#f7ebe8; --forest-2:#e5989b; --rust:#e5989b; --rust-soft:#4a2b33; --mint:#3d2830; --gold:#e5b95e; --credentials-bg:#f7ebe8; --credentials-ink:#1c1317; --credentials-sub:#5b4048; --credentials-accent:#8c3a44; --credentials-card:rgba(28,19,23,.07); --credentials-border:rgba(28,19,23,.16); --shadow:0 18px 60px rgba(0,0,0,.4); }
+    [data-theme="calm-lavender"]{ --bg:#161524; --paper:#211f36; --ink:#eceaf9; --muted:#b4afd8; --line:#3a375c; --forest:#eceaf9; --forest-2:#a78bfa; --rust:#a78bfa; --rust-soft:#322a56; --mint:#2e2b4d; --gold:#e5b95e; --credentials-bg:#eceaf9; --credentials-ink:#161524; --credentials-sub:#45416e; --credentials-accent:#5b21b6; --credentials-card:rgba(22,21,36,.07); --credentials-border:rgba(22,21,36,.16); --shadow:0 18px 60px rgba(0,0,0,.4); }
+    [data-theme="tokyo-night"]{ --bg:#1a1b26; --paper:#24283b; --ink:#c0caf5; --muted:#7aa2f7; --line:#3b4261; --forest:#c0caf5; --forest-2:#7dcfff; --rust:#7dcfff; --rust-soft:#1f3a52; --mint:#2c3350; --gold:#e5b95e; --credentials-bg:#c0caf5; --credentials-ink:#1a1b26; --credentials-sub:#3b4261; --credentials-accent:#075985; --credentials-card:rgba(26,27,38,.08); --credentials-border:rgba(26,27,38,.16); --shadow:0 18px 60px rgba(0,0,0,.4); }
+    [data-theme="catppuccin"]{ --bg:#1e1e2e; --paper:#313244; --ink:#cdd6f4; --muted:#a6adc8; --line:#45475a; --forest:#cdd6f4; --forest-2:#a6e3a1; --rust:#a6e3a1; --rust-soft:#2c4630; --mint:#383a52; --gold:#e5b95e; --credentials-bg:#cdd6f4; --credentials-ink:#1e1e2e; --credentials-sub:#45475a; --credentials-accent:#166534; --credentials-card:rgba(30,30,46,.08); --credentials-border:rgba(30,30,46,.16); --shadow:0 18px 60px rgba(0,0,0,.4); }
+    [data-theme="dracula"]{ --bg:#1e1f29; --paper:#282a36; --ink:#f8f8f2; --muted:#bd93f9; --line:#44475a; --forest:#f8f8f2; --forest-2:#50fa7b; --rust:#50fa7b; --rust-soft:#234d31; --mint:#343746; --gold:#e5b95e; --credentials-bg:#f8f8f2; --credentials-ink:#1e1f29; --credentials-sub:#44475a; --credentials-accent:#15803d; --credentials-card:rgba(30,31,41,.08); --credentials-border:rgba(30,31,41,.16); --shadow:0 18px 60px rgba(0,0,0,.4); }
+    [data-theme="nord"]{ --bg:#2e3440; --paper:#3b4252; --ink:#eceff4; --muted:#d8dee9; --line:#4c566a; --forest:#eceff4; --forest-2:#88c0d0; --rust:#88c0d0; --rust-soft:#33586a; --mint:#434c5e; --gold:#e5b95e; --credentials-bg:#eceff4; --credentials-ink:#2e3440; --credentials-sub:#4c566a; --credentials-accent:#0e7490; --credentials-card:rgba(46,52,64,.08); --credentials-border:rgba(46,52,64,.16); --shadow:0 18px 60px rgba(0,0,0,.35); }
+
+    /* Feather theme picker — top bar only */
+    .jump-nav { flex-wrap:wrap; align-items:center; }
+    .nav-picker { display:inline-flex; align-items:center; gap:16px; }
+    .nav-picker .feather-mark { height:48px; width:auto; display:block; }
+    .nav-picker label { font-size:.84rem; font-weight:700; white-space:nowrap; }
+    .nav-picker select {
+      min-height:44px; font:inherit; font-size:.88rem; font-weight:700;
+      color:var(--ink); background:var(--paper);
+      border:1px solid var(--line); border-radius:999px; padding:6px 12px;
+      box-shadow:0 2px 8px rgba(0,0,0,.04); max-width:190px; cursor:pointer;
+    }
+    .theme-hint {
+      margin:0; padding:2px 0 0; text-align:right;
+      color:var(--muted); font-size:.86rem; line-height:1.5;
+    }
+    .theme-hint a { font-weight:600; text-decoration:none; }
+    .theme-hint a:hover { text-decoration:underline; }
+    @media (max-width:850px){ .theme-hint { text-align:center; } }
+    .built-credit { padding:0 0 64px; }
+    .built-credit p {
+      margin:0; color:var(--muted); font-size:.94rem; line-height:1.75;
+      border-top:1px solid var(--line); padding-top:22px;
+    }
+    .built-credit .bc-label { font-weight:700; color:var(--ink); }
+    .built-credit a { font-weight:700; color:var(--forest); text-decoration:none; }
+    .built-credit a:hover { color:var(--rust); text-decoration:underline; }
+    @media (max-width:540px){ .nav-picker select { max-width:150px; } }
+
+
+    /* Pro Vault sales page only — Feather spacing scale: 8, 16, 24, 32, 48 */
+    .price-grid { display:grid; gap:16px; margin:0 0 48px; }
+    @media (min-width:700px){ .price-grid { grid-template-columns:1fr 1fr; } }
+    .price-card { background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:24px; }
+    .price-card h3 { margin:0 0 4px; }
+    .price-amount { font-size:2rem; font-weight:700; }
+    .price-card p { color:var(--muted); }
+    .price-card .btn { width:100%; margin-top:16px; }
+    .steps { list-style:none; margin:0 0 48px; padding:0; display:grid; gap:16px; }
+    @media (min-width:700px){ .steps { grid-template-columns:repeat(3,1fr); } }
+    .steps li { background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:20px; }
+    .steps strong { display:block; margin-bottom:6px; }
+  </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Product","name":"CRTA Pro Vault","description":"Three packs of copy-paste files that keep AI helpers on track: agent handoff suite, repo launch kit, and archetype context bundles. Plain Markdown, JSON, and zero-dependency shell. Works on Mac, iPhone, and 8GB Chromebook.","brand":{"@type":"Brand","name":"CRTA Tech Solutions"},"offers":[{"@type":"Offer","name":"Solo Pro Pack","price":"49","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://kelli-dotcom.github.io/pro-vault.html"},{"@type":"Offer","name":"Team Self-Serve License","price":"299","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://kelli-dotcom.github.io/pro-vault.html"}]}
+</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <nav class="jump-nav wrap" aria-label="Page sections">
+    <a href="index.html#story">My story</a>
+    <a href="index.html#work">What I’m building</a>
+    <a href="index.html#credentials">Credentials</a>
+    <a href="index.html#contact">Contact</a>
+    <span class="nav-picker">
+      <img class="feather-mark" src="feather-mark.svg" alt="" aria-hidden="true">
+      <label for="theme-select-nav">Feather theme</label>
+      <select id="theme-select-nav" aria-label="Preview a Feather theme">
+        <option value="sandstone" selected>Sandstone</option>
+        <option value="paper-light">Paper Light</option>
+        <option value="midday-sunlit">Midday Sunlit</option>
+        <option value="morning-rose">Morning Rose</option>
+        <option value="forest">Forest</option>
+        <option value="obsidian">Obsidian</option>
+        <option value="golden-hour">Golden Hour</option>
+        <option value="calm-lavender">Calm Lavender</option>
+        <option value="tokyo-night">Tokyo Night</option>
+        <option value="catppuccin">Catppuccin</option>
+        <option value="dracula">Dracula</option>
+        <option value="nord">Nord</option>
+        <option value="auto">Auto — day / night</option>
+      </select>
+    </span>
+  </nav>
+  <div class="wrap">
+    <p class="theme-hint">This page is built with <a href="https://github.com/kelli-dotcom/feather-themes">Feather Themes</a> — use the theme bar at the top to try the others and see them in use.</p>
+  </div>
+
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="vault-title">
+      <p class="kicker">CRTA Tech Solutions · For sale</p>
+      <h1 id="vault-title">CRTA Pro Vault</h1>
+      <p class="lede">Three packs of copy-paste files that keep AI helpers on track. Clear rules, clear handoffs between them, and limits so they don’t run in circles. Plain Markdown, JSON, and zero-dependency shell. No frameworks, no build steps. Made for a Mac, an iPhone, or an 8GB Chromebook.</p>
+      <p class="lede">Solo $49 one time. Team $299 a year. Self-serve digital files, delivered instantly. No 1-on-1 support or custom calls included.</p>
+    </section>
+
+    <section class="wrap" aria-labelledby="inside-title">
+      <h2 id="inside-title">What’s inside</h2>
+      <div class="project-list">
+        <article class="project">
+          <div class="project-num">01</div>
+          <div>
+            <h3>Agent handoff suite</h3>
+            <div class="project-role">Pack 1 · Production AGENTS.md</div>
+          </div>
+          <div class="project-detail">
+            <p>Drop-in guardrails, Rule-of-2 loop caps, and structured handoffs that stop AI agents from hallucinating, drifting, or burning tokens in retry loops.</p>
+            <div class="tags"><span class="tag">AGENTS.md templates</span><span class="tag">Solo, Team, Multi-Agent</span><span class="tag">JSON handoff schema</span><span class="tag">HANDOFF.md starter</span><span class="tag">mistakes.md starter</span></div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-num">02</div>
+          <div>
+            <h3>Repo launch kit</h3>
+            <div class="project-role">Pack 2 · High-conversion launch</div>
+          </div>
+          <div class="project-detail">
+            <p>Turn a GitHub repo into a silent, self-serve distribution engine. No cold outreach, no DMs, no sales calls.</p>
+            <div class="tags"><span class="tag">README blueprint</span><span class="tag">Positioning audit</span><span class="tag">Launch copy: X, HN, Reddit, Product Hunt</span><span class="tag">Silent Affiliate 1-Click Stack</span></div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-num">03</div>
+          <div>
+            <h3>Archetype context bundles</h3>
+            <div class="project-role">Pack 3 · Specialist squads</div>
+          </div>
+          <div class="project-detail">
+            <p>Ready-to-run 3-agent specialist squads, capped at 3 at a time so they run on low-cost machines, plus filled master context blueprints you paste into any new project.</p>
+            <div class="tags"><span class="tag">Product Shipper squad</span><span class="tag">Growth &amp; Positioning squad</span><span class="tag">QA &amp; Refactor squad</span><span class="tag">SaaS blueprint</span><span class="tag">Indie Tools blueprint</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap" aria-labelledby="how-title">
+      <h2 id="how-title">How you get it</h2>
+      <ol class="steps">
+        <li><strong>1. Buy Solo or Team.</strong> You pay once for Solo, once a year for Team. Polar handles the payment and the tax.</li>
+        <li><strong>2. Get the private repo and the 1-tap ZIP.</strong> Clone it on desktop, or tap once in Files on your phone to unzip it.</li>
+        <li><strong>3. Copy the files you need.</strong> Drop them into your project folders. No hidden dot-files required.</li>
+      </ol>
+    </section>
+
+    <section class="wrap" aria-labelledby="price-title">
+      <h2 id="price-title">Pricing</h2>
+      <div class="price-grid">
+        <div class="price-card">
+          <h3>Solo Pro Pack</h3>
+          <div class="price-amount">$49 <span style="font-size:1rem; font-weight:400;">one time</span></div>
+          <p>One person. Personal and commercial use, across unlimited projects you own.</p>
+          <a class="btn" href="#" data-buy="solo">Buy Solo — $49</a>
+        </div>
+        <div class="price-card">
+          <h3>Team Self-Serve License</h3>
+          <div class="price-amount">$299 <span style="font-size:1rem; font-weight:400;">a year</span></div>
+          <p>One company. Internal commercial use for your employees and contractors, while the subscription is active.</p>
+          <a class="btn" href="#" data-buy="team">Buy Team — $299/yr</a>
+        </div>
+      </div>
+      <p style="color:var(--muted);">Self-serve only. No 1-on-1 support, no custom calls. Do not resell, repackage, or publish the vault contents publicly.</p>
+    </section>
+
+    <section class="built-credit wrap">
+      <p><span class="bc-label">CRTA Pro Vault v1.0.0.</span> Built with <a href="https://github.com/kelli-dotcom/feather-themes">Feather Themes</a>. <a href="index.html">Back to kelli-dotcom.github.io</a></p>
+    </section>
+  </main>
+
+<script>
+    // Feather theme picker — top bar only, 12 flagships + Auto, preview only
+    (function () {
+      var THEMES = {
+        "sandstone":     { mode:"light" },
+        "paper-light":   { mode:"light" },
+        "midday-sunlit": { mode:"light" },
+        "morning-rose":  { mode:"light" },
+        "forest":        { mode:"dark" },
+        "obsidian":      { mode:"dark" },
+        "golden-hour":   { mode:"dark" },
+        "calm-lavender": { mode:"dark" },
+        "tokyo-night":   { mode:"dark" },
+        "catppuccin":    { mode:"dark" },
+        "dracula":       { mode:"dark" },
+        "nord":          { mode:"dark" }
+      };
+      var root = document.documentElement;
+      var selectNav = document.getElementById("theme-select-nav");
+      var currentChoice = "sandstone";
+      function autoTheme(){ var h = new Date().getHours(); return (h >= 21 || h < 7) ? "forest" : "sandstone"; }
+      function applyTheme(name){
+        if (!THEMES[name]) name = "sandstone";
+        root.setAttribute("data-theme", name);
+        root.style.colorScheme = THEMES[name].mode;
+      }
+      function choose(choice){
+        currentChoice = choice;
+        if (selectNav && selectNav.value !== choice) selectNav.value = choice;
+        applyTheme(choice === "auto" ? autoTheme() : choice);
+      }
+      if (selectNav) selectNav.addEventListener("change", function(){ choose(selectNav.value); });
+      applyTheme("sandstone");
+      setInterval(function(){ if (currentChoice === "auto") applyTheme(autoTheme()); }, 60000);
+    })();
+  </script>
+</body>
+</html>
