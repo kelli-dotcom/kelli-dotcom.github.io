@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="136 12 240 492" width="240" height="492" role="img" aria-label="Feather Themes logo">
+  <defs>
+    <clipPath id="vaneClip">
+      <path d="M256,16 C330,110 372,210 356,320 C342,410 300,452 256,462 C212,452 170,410 156,320 C140,210 182,110 256,16 Z"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#vaneClip)">
+    <rect x="120" y="16" width="272" height="38" fill="#10b981"/>
+    <rect x="120" y="54" width="272" height="38" fill="#be5a74"/>
+    <rect x="120" y="92" width="272" height="38" fill="#0f766e"/>
+    <rect x="120" y="130" width="272" height="38" fill="#e5989b"/>
+    <rect x="120" y="168" width="272" height="38" fill="#a78bfa"/>
+    <rect x="120" y="206" width="272" height="38" fill="#7dcfff"/>
+    <rect x="120" y="244" width="272" height="38" fill="#a6e3a1"/>
+    <rect x="120" y="282" width="272" height="38" fill="#50fa7b"/>
+    <rect x="120" y="320" width="272" height="38" fill="#34d399"/>
+    <rect x="120" y="358" width="272" height="38" fill="#88c0d0"/>
+    <rect x="120" y="396" width="272" height="34" fill="#059669"/>
+    <rect x="120" y="430" width="272" height="38" fill="#047857"/>
+  </g>
+  <path d="M256,16 C330,110 372,210 356,320 C342,410 300,452 256,462 C212,452 170,410 156,320 C140,210 182,110 256,16 Z" fill="none" stroke="#1c1917" stroke-width="4"/>
+  <path d="M256,16 L256,500" stroke="#1c1917" stroke-width="7" stroke-linecap="round" fill="none"/>
+  <path d="M256,462 L256,500" stroke="#1c1917" stroke-width="9" stroke-linecap="round" fill="none"/>
+</svg>

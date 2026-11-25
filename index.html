@@ -383,6 +383,7 @@
     /* Feather theme picker — top bar only */
     .jump-nav { flex-wrap:wrap; align-items:center; }
     .nav-picker { display:inline-flex; align-items:center; gap:8px; }
+    .nav-picker .feather-mark { height:36px; width:auto; display:block; }
     .nav-picker label { font-size:.84rem; font-weight:700; white-space:nowrap; }
     .nav-picker select {
       min-height:44px; font:inherit; font-size:.88rem; font-weight:700;
@@ -418,6 +419,7 @@
     <a href="#credentials">Credentials</a>
     <a href="#contact">Contact</a>
     <span class="nav-picker">
+      <img class="feather-mark" src="feather-mark.svg" alt="" aria-hidden="true">
       <label for="theme-select-nav">Feather theme</label>
       <select id="theme-select-nav" aria-label="Preview a Feather theme">
         <option value="sandstone" selected>Sandstone</option>
