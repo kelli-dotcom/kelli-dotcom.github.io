@@ -13,6 +13,7 @@
 - **Verify before reporting.** Never claim a task is complete from the build alone. Check it with a direct tool result, a file read, an exit code, or a test pass. If it cannot be verified, say so plainly.
 - **Keep root files visible.** Never hide AGENTS.md, llms.txt, HANDOFF.md, mistakes.md, or skills/ in dot-files or dot-folders.
 - **Rule of 2.** A failing command, build, or edit gets at most 2 retries with the same error. Then halt, report the exact error, and wait.
+- **Missing skill? Check the registry.** When the work needs a skill this repo does not have, look it up in `SKILL_REGISTRY.md` in repoverse-master, then recommend the repo and the skill. Say why it fits in plain human words, framed around what the person needs.
 
 ## Entry points
 
